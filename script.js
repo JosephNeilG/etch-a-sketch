@@ -48,7 +48,7 @@ function resetBoard() {
 }
 
 document.querySelector('body').addEventListener('click', (e) => {
-    if (e.target.tagName != 'BUTTON') {
+    if (e.target.tagName != 'BUTTON' && !(e.target.tagName === 'INPUT' && e.target.type === 'range')) {
         click = !click;
         if (click) {
             document.querySelector('.mode').textContent = "Mode: Coloring Active";
