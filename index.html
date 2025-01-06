@@ -15,8 +15,8 @@
             <div class="buttons">
                 <button onclick="changeColor('black')">black</button>
                 <button onclick="changeColor('white')">Eraser</button>
-                <button>Random</button>
-                <button>Reset</button>
+                <button onclick="changeColor('random')">Random</button>
+                <button onclick="resetBoard()">Reset</button>
             </div>
             <div>
                 <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
