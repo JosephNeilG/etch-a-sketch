@@ -18,15 +18,13 @@ function populateBoard (size) {
     }
 }
 
-populateBoard(16);
-
-function changeSize(input) {
-    if (input >= 2 && input <= 100) {
-        populateBoard(input);
-    } else {
-        console.log("too many squares");
-    }
+function changeSize(size) {
+    document.querySelectorAll('#sliderValue').forEach(el => (el.textContent = size));
+    
+    populateBoard(size);
 }
+
+populateBoard(16);
 
 function colorSquare() {
     if (click) {
