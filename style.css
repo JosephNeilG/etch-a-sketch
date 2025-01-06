@@ -1,5 +1,49 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
+.flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .board {
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     display: grid;
 }
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mode {
+    padding-top: 24px;
+    font-size: 11px;
+}
+
+.buttons {
+    padding-top: 20px;
+    padding-bottom: 13px;
+}
+
+input[type="range"] {
+    accent-color: #767676;
+  }
+
+#sliderValue {
+    font-size: 12px;
+}
+
+
+
+

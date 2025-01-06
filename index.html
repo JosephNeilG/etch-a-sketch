@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
+    <!-- minify -->
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <!-- latest -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <!-- core style only -->
+    <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
     <title>Etch-A-Sketch</title>
 </head>
 <body>
-    <div class="flex-container">
-        <div class="title"><h1>Etch-A-Sketch Pad</h1></div>
-        <div class="mode">Mode: Coloring Active</div>
+    <div class="flex-container">   
         <div class="content">
+            <div class="nes-container with-title is-centered is-dark">
+                <p class="title">Sketch Pad</p>
             <div class="board"></div>
-            <div class="buttons">
-                <button onclick="changeColor('black')">Black</button>
-                <button onclick="changeColor('white')">Eraser</button>
-                <button onclick="changeColor('random')">Colorful</button>
-                <button onclick="resetBoard()">Clear</button>
+            <div class="mode">Mode: Coloring Active</div>
             </div>
+            <div class="buttons">
+                <button onclick="changeColor('black')" type="button" class="nes-btn">Black</button>
+                <button onclick="changeColor('white')" type="button" class="nes-btn">Eraser</button>
+                <button onclick="changeColor('random')" type="button" class="nes-btn">Colorful</button>
+                <button onclick="resetBoard()" type="button" class="nes-btn">Clear</button>
+            </div>
+            
             <div>
-                <label for="boardSize">Board Size: </label>
                 <span id="sliderValue">16</span> x <span id="sliderValue">16</span>
                 <input type="range" id="boardSize" min="2" max="100" value="16" oninput="changeSize(this.value)">
             </div>            
